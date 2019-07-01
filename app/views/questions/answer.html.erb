@@ -1,0 +1,18 @@
+<h1>Stupid Coaching</h1>
+<br><br>
+<!-- <h2>question</h2> -->
+<p><strong><%= @question %></strong></p>
+<p><em>- You</em></p>
+
+<!-- <h2>answer</h2> -->
+<% if @question == 'I am going to work' %>
+<p><strong>Great!</strong></p>
+<% elsif @question[-1] == '?' %>
+<p><strong>Silly question, get dressed and go to work!</strong></p>
+<% else %>
+<p><strong>I don't care, get dressed and go to work</strong></p>
+<% end %>
+<p><em>- Your coach</em></p>
+
+<br>
+<%= link_to 'Ask again?', '/ask' %>
